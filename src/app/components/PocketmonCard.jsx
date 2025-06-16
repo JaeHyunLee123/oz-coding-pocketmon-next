@@ -1,6 +1,6 @@
 /**
  * @typedef {Object} PocketmonCardProps
- * @property {import("@/types").PocketmonData} pocketmon
+ * @property {import("@/app/types").PocketmonData} pocketmon
  */
 
 import Image from "next/image";
