@@ -16,7 +16,7 @@ function PocketmonCard({ pocketmon }) {
       className="flex flex-col items-center justify-center px-3 py-2 transition-transform ease-in-out bg-white border-b-4 border-r-4 rounded-2xl hover:scale-105"
       key={pocketmon.id}
     >
-      <Link to={`/detail/${pocketmon.id}`}>
+      <Link href={`/detail/${pocketmon.id}`}>
         <Image src={pocketmon.frontImage} alt={`${pocketmon.name}-image`} />
       </Link>
 
