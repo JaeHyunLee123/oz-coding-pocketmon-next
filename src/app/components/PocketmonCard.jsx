@@ -17,16 +17,18 @@ function PocketmonCard({ pocketmon }) {
       key={pocketmon.id}
     >
       <Link href={`/detail/${pocketmon.id}`}>
-        <Image src={pocketmon.frontImage} alt={`${pocketmon.name}-image`} />
+        <Image
+          width={100}
+          height={100}
+          src={pocketmon.frontImage}
+          alt={`${pocketmon.name}-image`}
+        />
       </Link>
 
       <div className="flex items-center justify-center gap-2">
         <span>{pocketmon.name}</span>
         <button>
-          <Heart
-            fill={favorites.includes(pocketmon.id) ? "red" : "none"}
-            className="hover:cursor-pointer"
-          />
+          <Heart className="hover:cursor-pointer" />
         </button>
       </div>
     </section>
