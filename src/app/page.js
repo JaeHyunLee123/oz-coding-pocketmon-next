@@ -6,7 +6,7 @@ export default async function Home() {
   const { data: pocketmons } = await res.json();
 
   return (
-    <div className="flex flex-wrap justify-center gap-5">
+    <div className="flex flex-wrap justify-center gap-5 p-5">
       {pocketmons
         ? pocketmons.map((pocketmon) => (
             <PocketmonCard key={pocketmon.id} pocketmon={pocketmon} />
