@@ -2,6 +2,10 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "./components/Header";
 
+const neoDunggeunmo = localFont({
+  src: "./fonts/neodgm.woff",
+});
+
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -22,7 +26,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${neoDunggeunmo.className} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Header />
         {children}
