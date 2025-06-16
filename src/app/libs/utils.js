@@ -1,3 +1,5 @@
+/** @typedef {import("../type").PocketmonData} PocketmonData */
+
 /**
  *
  * @param {number} id
@@ -27,4 +29,24 @@ export const createPocketmonImageUrl = ({ id, isFront = true }) => {
   } else {
     return `${baseUrl}/back/${id}.png`;
   }
+};
+
+export const fetchPocketmonById = async (id) => {
+  const response = await fetch(createPocketmonSpeciesGetUrl(id));
+  const data = await response.json();
+
+  /**
+   * @type {PocketmonData}
+   */
+  const pocketmonData = {
+    id: id,
+    name: data.names.find((el) => el.language.name === "ko").name,
+    description: data.flavor_text_entries.find(
+      (el) => el.language.name === "ko"
+    ).flavor_text,
+    frontImage: createPocketmonImageUrl({ id, isFront: true }),
+    backImage: createPocketmonImageUrl({ id, isFront: false }),
+  };
+
+  return pocketmonData;
 };
