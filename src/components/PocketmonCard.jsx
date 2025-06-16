@@ -5,7 +5,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import Heart from "./icons/Heart";
+import LikeButton from "./LikeButton";
 
 /**
  * @param {PocketmonCardProps} props
@@ -27,9 +27,7 @@ function PocketmonCard({ pocketmon }) {
 
       <div className="flex items-center justify-center gap-2">
         <span>{pocketmon.name}</span>
-        <button>
-          <Heart className="hover:cursor-pointer" />
-        </button>
+        <LikeButton pocketmonID={pocketmon.id} />
       </div>
     </section>
   );
