@@ -1,4 +1,4 @@
-import PocketmonCard from "./components/PocketmonCard";
+import PocketmonCard from "../components/PocketmonCard";
 
 export default async function Home() {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";

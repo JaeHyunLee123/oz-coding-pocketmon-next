@@ -1,6 +1,6 @@
 /** @typedef {import("../type").PocketmonData} PocketmonData */
 
-import { fetchPocketmonById } from "@/app/libs/utils";
+import { fetchPocketmonById } from "@/libs/utils";
 
 export async function GET(request) {
   const splitedURL = request.url.split("/");

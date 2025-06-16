@@ -1,6 +1,6 @@
 /** @typedef {import("../type").PocketmonData} PocketmonData */
 
-import { fetchPocketmonById } from "@/app/libs/utils";
+import { fetchPocketmonById } from "@/libs/utils";
 
 const MAX_ID = 151;
 

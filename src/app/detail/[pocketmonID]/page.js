@@ -1,5 +1,5 @@
-import FlipingImage from "@/app/components/FlipingImage";
-import Heart from "@/app/components/icons/Heart";
+import FlipingImage from "@/components/FlipingImage";
+import Heart from "@/components/icons/Heart";
 
 export default async function Detail({ params }) {
   const { pocketmonID } = await params;
